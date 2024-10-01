@@ -379,10 +379,10 @@ inline void running_machine::popmessage(Format &&fmt, Params &&... args) const
 {
 	// if the format is nullptr, it is a signal to clear the popmessage
 	// otherwise, generate the buffer and call the UI to display the message
-	if (is_null<Format>::value(fmt))
-		popup_clear();
-	else
-		popup_message(util::make_format_argument_pack(std::forward<Format>(fmt), std::forward<Params>(args)...));
+	// if (is_null<Format>::value(fmt))
+	// 	popup_clear();
+	// else
+	// 	popup_message(util::make_format_argument_pack(std::forward<Format>(fmt), std::forward<Params>(args)...));
 }
 
 
